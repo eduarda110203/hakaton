@@ -8,7 +8,7 @@ function obterRota()
 
     //DEFINE A ROTA PADRÃO CASO ESTIVER VAZIA
     if (empty($rota[0])) {
-        $rota[0] = 'gerenciamento-alunos';
+        $rota[0] = 'home';
     }
 
     //RETORNA A ROTA
@@ -46,9 +46,14 @@ $tituloPagina = ucfirst(str_replace('-', ' ', $rota));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($tituloPagina); ?></title>
-    <link rel="stylesheet" href="components/css/style.css">
     <link rel="shortcut icon" href="components/assets/icon.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="components/css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -58,17 +63,17 @@ $tituloPagina = ucfirst(str_replace('-', ' ', $rota));
     include("components/header.php");
     ?>
 
-    <?php
-    //INCLUI O COMPONETE DE NAVEGAÇÃO
-    include("components/navigation.php");
-    ?>
-
     <main>
         <?php
-        //INCLUI AS PÁGINAS RETORNADAS PELO OBTERROTA()
+        //INCLUI AS PÁGINAS RETORNADAS PELO OBTER ROTA()
         incluirPagina($rota);
         ?>
     </main>
+
+    <?php
+    //INCLUI O COMPONETE DO FOOTER
+    include("components/footer.php");
+    ?>
 
     <script>
         //METODO PARA ABRIR E FECHAR O MENU LATERAL
@@ -76,7 +81,7 @@ $tituloPagina = ucfirst(str_replace('-', ' ', $rota));
             const navegacao = document.querySelector('.navegacao');
             navegacao.classList.toggle('open');
         }
-        
+
         //FUNÇÃO QUE EXIBE UM AVISO PARA O USUÁRIO
         function mostrarAviso(mensagem, tipo = 'info') {
             const mensagensAviso = document.querySelector('#mensagensAviso');

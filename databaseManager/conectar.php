@@ -1,16 +1,13 @@
 <?php
-//VARIÁVEIS PARA CONECTAR AO BANCO DE DADOS
-$servername = "localhost:3306";
+// Conectar ao banco de dados
+$servername = "localhost:3308";
 $username = "root";
-$password = "etec2023";
-$dbname = "curriculo";
+$password = "etec2024";
+$database = "site_adocao";
 
-try {
-    //VERIFICA SE A CONEXÃO FOI ESTABELECIDA
-    $conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $database);
 
-} catch (Exception $e) {
-
-    die("Erro:" . $e->getMessage());
+// Verificar a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
 }
-?>

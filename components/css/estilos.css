@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta a imagem para cobrir o elemento */
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto; /* Adiciona centralização automática */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-custom {
+    background-color: #ff8f73; /* Cor do fundo do header */
+}
+
+.btn-custom {
+    background-color: #e44141; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+}
+
+.btn-custom:hover {
+    background-color: rgb(254, 240, 173); /* Cor de fundo ao passar o mouse */
+}
+
+.carousel-item {
+    height: 45vh; /* Ajusta a altura do carrossel para a altura da viewport */
+}
+
+.carousel-inner {
+    background-color: #994c30; /* Cor de fundo do carrossel */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Cor do texto */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+  
+
+
+.spacer {
+    width: 20px;
+    display: inline-block;
+}
+
+@font-face {
+    font-family: 'Bauhaus 93';
+    src: url('fonts/bauhaus93.woff') format('woff'), /* Substitua pelo caminho e formato corretos */
+         url('fonts/bauhaus93.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.adopt-text {
+    text-align: center; /* Centraliza o texto */
+    color: #ff0062; /* Define a cor do texto */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo do parágrafo */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px; /* Aumenta o tamanho da fonte do parágrafo */
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif; /* Define a fonte padrão do site */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-2 {
+    max-width: 960px; /* Defina uma largura máxima menor conforme necessário */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 0 15px; /* Adiciona espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adiciona espaçamento entre as linhas */
+}
+
+.row.justify-content-center {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que as colunas se movam para a linha seguinte se necessário */
+}
+
+.container-2 .col-sm-4 {
+    flex: 1 1 30%; /* Permite que as colunas se ajustem de acordo com o tamanho do container */
+    box-sizing: border-box; /* Inclui o padding e bordas na largura total do elemento */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 10px; /* Adiciona espaçamento interno para evitar que o conteúdo fique muito colado às bordas */
+}
+
+.img-fixed-size {
+    width: 140px;   /* Define a largura da imagem */
+    height: 140px;  /* Define a altura da imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container sem distorção */
+    border-radius: 50%; /* Mantém a imagem circular */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    .container-2 .col-sm-4 {
+        max-width: 100%; /* Colunas ocupam toda a largura disponível em telas menores */
+    }
+
+}
+footer {
+    padding: 20px;
+    background-color: #ff8f73; /* Ajuste conforme necessário */
+}
+footer .social-icons a {
+    font-size: 24px;
+    color: #ffffff; /* Cor do texto dos ícones */
+}
+footer .social-icons a:hover {
+    color: #ffffff; /* Cor do texto dos ícones ao passar o mouse */
+}
